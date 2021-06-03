@@ -1,0 +1,11 @@
+<div>
+  <h3>
+    Suppliers
+  </h3>
+  <input type="text" class="search-input" placeholder="Type to filter the name column..."
+    (keyup)="updateFilter($event)" />
+  <ngx-datatable #table class="material" [columns]="columns" [columnMode]="ColumnMode.force" [headerHeight]="50"
+    [footerHeight]="50" rowHeight="auto" [limit]="10" [rows]="rows" [selected]="selected"
+    [selectionType]="SelectionType.cell" (select)="onSelect($event)" (activate)="onActivate($event)">
+  </ngx-datatable>
+</div>
